@@ -23,6 +23,7 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth;  
 }
 
 body{
@@ -70,11 +71,11 @@ header{
     width:100%;
     background:#fff;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-    padding:2rem 9%;
+    padding:1rem 3%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000;
+    z-index: 3;
     padding-bottom: 1px;
 }
 
@@ -563,7 +564,7 @@ ul {
   color: #ffffff;
   text-decoration: none;
   font-weight: 300;
-  color: #000;
+  color: #fff;
   display: block;
   transition: all 0.3s ease;
 }
@@ -733,7 +734,42 @@ ul {
   }
 }
 
+/* //preloader// */
+.spinner{
+  width: 80px;
+  height: 80px;
+  
+  border: 2px solid #f3f3f3;
+  border-top:3px solid #f25a41;
+  border-radius: 100%;
+  
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+  
+  animation: spin 1s infinite linear;
+}
 
+@keyframes spin {
+  from{
+      transform: rotate(0deg);
+  }to{
+      transform: rotate(360deg);
+  }
+}
+
+#overlay{
+height:100%;
+width:100%;
+background: whitesmoke;
+position:fixed;
+left:0;
+top:0;
+z-index: 4;
+}
 
 
 
